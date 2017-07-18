@@ -50,6 +50,7 @@ call vundle#begin()
     Plugin 'morhetz/gruvbox'
     Plugin 'ctrlpvim/ctrlp.vim'
     Plugin 'hkupty/iron.nvim'
+    Plugin 'ChesleyTan/wordCount.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 "execute pathogen#infect()
@@ -77,7 +78,9 @@ set incsearch
 set encoding=utf-8
 set foldmethod=marker
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-set statusline=WC:%{WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]
+set statusline=WC:%{wordCount#WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]
+
+"set statusline+=%{wordCount#WordCount()}
 
 set foldcolumn=6
 set autoread
@@ -131,19 +134,19 @@ nnoremap <F4> :bp<CR>
 
 "let g:pandoc#filetypes#handled = '
 let g:pandoc#biblio#sources = "bcg"
-let g:pandoc#biblio#bibs =  ['/home/mackenza/Documents/ref_bibs/uni.bib']
+let g:pandoc#biblio#bibs =  ['/home/mackenza/ref_bibs/uni.bib']
 let g:pandoc_use_bibtool = 1
 set grepprg=grep\ -nH\ $*
 
 let g:pandoc#folding#fdc = 3
 let g:pandoc#formatting#mode = 's'
 let g:pandoc#folding#level = 2
-"let g:pandoc#completion#bib#mode='citeproc'
-let g:pandoc#completion#bib#mode='fallback'
+let g:pandoc#completion#bib#mode='citeproc'
+"let g:pandoc#completion#bib#mode='fallback'
 let g:pandoc#folding#fold_fenced_codeblocks=1
 
 "bibtex
-let g:Tex_BIBINPUTS =  ['/home/mackenza/Documents/ref_bibs/uni.bib']
+let g:Tex_BIBINPUTS =  ['/home/mackenza/ref_bibs/uni.bib']
 let g:Tex_BibtexFlavor = 'bibtex'
 set omnifunc=pandoc#completion#Complete
 let g:Tex_Flavor='latex'
@@ -199,7 +202,6 @@ endfunction
 
 " Lines added by the Vim-R-plugin command :RpluginConfig (2014-Aug-27 20:54):
 filetype plugin on
-let vimrplugin_assign = 0
 " Change the <LocalLeader> key:
 let maplocalleader = ","
 " Use Ctrl+Space to do omnicompletion:
@@ -378,3 +380,10 @@ let g:gruvbox_italic=1
 colorscheme gruvbox
 let g:gruvbox_bold=1
 let g:gruvbox_contrast_dark='hard'
+
+augroup ironmapping
+    autocmd!
+    autocmd Filetype python nmap <buffer> <localleader>t <Plug>(iron-send-motion)
+    autocmd Filetype python vmap <buffer> <localleader>t <Plug>(iron-send-motion)
+    autocmd Filetype python nmap <buffer> <localleader>p <Plug>(iron-repeat-cmd)
+augroup END
