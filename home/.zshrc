@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim=nvim 
+alias vim=/usr/bin/nvim.appimage 
 if [ "$TMUX" = "" ]; then tmux; fi
 
 alias vpu="nmcli con up id lancs-vpn"
