@@ -91,3 +91,4 @@ if [ "$TMUX" = "" ]; then tmux; fi
 
 alias vpu="nmcli con up id lancs-vpn"
 alias vpd="nmcli con down id lancs-vpn"
+alias gcgp='gcam "lu" && gp'
