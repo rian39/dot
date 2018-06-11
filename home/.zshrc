@@ -1,9 +1,13 @@
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/mackenza/.oh-my-zsh
+
+export ARDUINO_DIR=/home/mackenza/arduino-projects
+export ARDMK_DIR=/home/mackenza/code/Arduino-Makefile
+export AVR_TOOLS_DIR=/usr/include
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.

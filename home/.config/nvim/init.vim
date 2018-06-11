@@ -51,6 +51,10 @@ call vundle#begin()
     Plugin 'ctrlpvim/ctrlp.vim'
     Plugin 'hkupty/iron.nvim'
     Plugin 'ChesleyTan/wordCount.vim'
+    Plugin 'supercollider/scvim'
+    Plugin 'munshkr/vim-tidal'
+    Plugin 'sudar/vim-arduino-syntax'
+    Plugin 'sudar/vim-arduino-snippets'
 call vundle#end()            " required
 filetype plugin indent on    " required
 "execute pathogen#infect()
@@ -78,7 +82,7 @@ set incsearch
 set encoding=utf-8
 set foldmethod=marker
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-set statusline=WC:%{wordCount#WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]
+"set statusline=WC:%{wordCount#WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]
 
 "set statusline+=%{wordCount#WordCount()}
 
@@ -132,9 +136,10 @@ nnoremap <F4> :bp<CR>
 
 "pandoc plugin files
 
-"let g:pandoc#filetypes#handled = '
+let g:pandoc#filetypes#handled = ["pandoc", "markdown"]
+let g:pandoc#filetypes#pandoc_markdown = 0
 let g:pandoc#biblio#sources = "bcg"
-let g:pandoc#biblio#bibs =  ['/home/mackenza/ref_bibs/uni.bib']
+let g:pandoc#biblio#bibs =  ['/home/mackenza/ref_bibs/ensembles.bib']
 let g:pandoc_use_bibtool = 1
 set grepprg=grep\ -nH\ $*
 
@@ -146,7 +151,7 @@ let g:pandoc#completion#bib#mode='citeproc'
 let g:pandoc#folding#fold_fenced_codeblocks=1
 
 "bibtex
-let g:Tex_BIBINPUTS =  ['/home/mackenza/ref_bibs/uni.bib']
+let g:Tex_BIBINPUTS =  ['/home/mackenza/ref_bibs/ensembles.bib']
 let g:Tex_BibtexFlavor = 'bibtex'
 set omnifunc=pandoc#completion#Complete
 let g:Tex_Flavor='latex'
@@ -372,6 +377,7 @@ au CursorHoldI * stopinsert
 
 nnoremap gO :!eog <cfile> &<CR>
 nnoremap gP :!evince <cfile> &<CR>
+nnoremap gW :!lowriter <cfile> &<CR>
 
 nnoremap <C-\> :NERDTreeToggle<cr>
 nnoremap <F2> :NERDTreeToggle<cr>
