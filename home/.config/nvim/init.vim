@@ -30,11 +30,11 @@ call vundle#begin()
     Bundle "klen/python-mode"
     "Bundle "ivanov/vim-ipython"
     Bundle "jamessan/vim-gnupg"
-    Bundle "lervag/vimtex"
+    "Bundle "lervag/vimtex"
     Bundle "kshenoy/vim-signature"
     Bundle "farseer90718/vim-reveal"
-    Bundle "csexton/jekyll.vim"
-    Bundle "vim-scripts/TwitVim"
+    "Bundle "csexton/jekyll.vim"
+    "Bundle "vim-scripts/TwitVim"
     "Bundle "Shougo/neocomplete.vim"
     "Plugin 'Shougo/neosnippet'
     "Plugin 'Shougo/neosnippet-snippets'
@@ -46,15 +46,17 @@ call vundle#begin()
     Bundle 'ron89/thesaurus_query.vim'
     Plugin 'christianrondeau/vim-base64'
     Plugin 'christoomey/vim-tmux-navigator'
-    Plugin 'leafgarland/typescript-vim'
+    "Plugin 'leafgarland/typescript-vim'
     Plugin 'morhetz/gruvbox'
     Plugin 'ctrlpvim/ctrlp.vim'
     Plugin 'hkupty/iron.nvim'
     Plugin 'ChesleyTan/wordCount.vim'
     Plugin 'supercollider/scvim'
     Plugin 'munshkr/vim-tidal'
-    Plugin 'sudar/vim-arduino-syntax'
-    Plugin 'sudar/vim-arduino-snippets'
+    ""Plugin 'sudar/vim-arduino-syntax'
+    "Plugin 'thorstenb/odpdown'
+    "Plugin 'sudar/vim-arduino-snippets'
+    "
 call vundle#end()            " required
 filetype plugin indent on    " required
 "execute pathogen#infect()
@@ -82,9 +84,6 @@ set incsearch
 set encoding=utf-8
 set foldmethod=marker
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
-"set statusline=WC:%{wordCount#WordCount()}\ [FILE:%F%m%r%h%w]\ [TYPE=%Y\ %{&ff}]\ \ [%l/%L\ (%p%%)][GIT:%{fugitive#statusline()}]
-
-"set statusline+=%{wordCount#WordCount()}
 
 set foldcolumn=6
 set autoread
@@ -139,7 +138,7 @@ nnoremap <F4> :bp<CR>
 let g:pandoc#filetypes#handled = ["pandoc", "markdown"]
 let g:pandoc#filetypes#pandoc_markdown = 0
 let g:pandoc#biblio#sources = "bcg"
-let g:pandoc#biblio#bibs =  ['/home/mackenza/ref_bibs/ensembles.bib']
+let g:pandoc#biblio#bibs =  ['/home/mackenza/ref_bibs/uni.bib']
 let g:pandoc_use_bibtool = 1
 set grepprg=grep\ -nH\ $*
 
@@ -151,7 +150,7 @@ let g:pandoc#completion#bib#mode='citeproc'
 let g:pandoc#folding#fold_fenced_codeblocks=1
 
 "bibtex
-let g:Tex_BIBINPUTS =  ['/home/mackenza/ref_bibs/ensembles.bib']
+let g:Tex_BIBINPUTS =  ['/home/mackenza/ref_bibs/uni.bib']
 let g:Tex_BibtexFlavor = 'bibtex'
 set omnifunc=pandoc#completion#Complete
 let g:Tex_Flavor='latex'
@@ -255,7 +254,7 @@ let g:lightline = {
             \   'fugitive': 'MyFugitive',
             \   'readonly': 'MyReadonly',
             \   'modified': 'MyModified',
-            \      'count': 'WordCount'
+            \   'count':'WordCount'
             \ },
             \ 'separator': { 'left':  '▶', 'right':  '▶'},
             \ 'subseparator': { 'left':  '»', 'right': '»' }
@@ -389,7 +388,7 @@ let g:gruvbox_contrast_dark='hard'
 
 augroup ironmapping
     autocmd!
-    autocmd Filetype python nmap <buffer> <localleader>t <Plug>(iron-send-motion)
-    autocmd Filetype python vmap <buffer> <localleader>t <Plug>(iron-send-motion)
-    autocmd Filetype python nmap <buffer> <localleader>p <Plug>(iron-repeat-cmd)
+    autocmd Filetype ipython nmap <buffer> <localleader>t <Plug>(iron-send-motion)
+    autocmd Filetype ipython vmap <buffer> <localleader>t <Plug>(iron-send-motion)
+    autocmd Filetype ipython nmap <buffer> <localleader>p <Plug>(iron-repeat-cmd)
 augroup END

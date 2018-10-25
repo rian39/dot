@@ -1,6 +1,6 @@
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH:$HOME/go/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/mackenza/.oh-my-zsh
@@ -90,9 +90,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim=/usr/bin/nvim.appimage 
 if [ "$TMUX" = "" ]; then tmux; fi
 
+alias vim=nvim
 alias vpu="nmcli con up id lancs-vpn"
 alias vpd="nmcli con down id lancs-vpn"
 alias gcgp='gcam "lu" && gp'
+alias vb="vim /home/mackenza/b.md.gpg"
