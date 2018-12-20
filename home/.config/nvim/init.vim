@@ -43,7 +43,7 @@ call vundle#begin()
     Plugin 'severin-lemaignan/vim-minimap'
     Plugin 'chrisbra/csv.vim'
     Plugin 'junegunn/goyo.vim'
-    Bundle 'ron89/thesaurus_query.vim'
+    "Bundle 'ron89/thesaurus_query.vim'
     Plugin 'christianrondeau/vim-base64'
     Plugin 'christoomey/vim-tmux-navigator'
     "Plugin 'leafgarland/typescript-vim'
@@ -51,7 +51,7 @@ call vundle#begin()
     Plugin 'ctrlpvim/ctrlp.vim'
     Plugin 'hkupty/iron.nvim'
     Plugin 'ChesleyTan/wordCount.vim'
-    Plugin 'supercollider/scvim'
+    "Plugin 'supercollider/scvim'
     Plugin 'munshkr/vim-tidal'
     ""Plugin 'sudar/vim-arduino-syntax'
     "Plugin 'thorstenb/odpdown'
@@ -137,16 +137,16 @@ nnoremap <F4> :bp<CR>
 
 let g:pandoc#filetypes#handled = ["pandoc", "markdown"]
 let g:pandoc#filetypes#pandoc_markdown = 0
-let g:pandoc#biblio#sources = "bcg"
-let g:pandoc#biblio#bibs =  ['/home/mackenza/ref_bibs/uni.bib']
+let g:pandoc#biblio#sources = "cg"
+let g:pandoc#biblio#bibs =  ['/home/mackenza/ref_bibs/mackenzie.bib']
 let g:pandoc_use_bibtool = 1
 set grepprg=grep\ -nH\ $*
 
 let g:pandoc#folding#fdc = 3
 let g:pandoc#formatting#mode = 's'
 let g:pandoc#folding#level = 2
-let g:pandoc#completion#bib#mode='citeproc'
-"let g:pandoc#completion#bib#mode='fallback'
+"let g:pandoc#completion#bib#mode='pandoc-citeproc'
+let g:pandoc#completion#bib#mode='fallback'
 let g:pandoc#folding#fold_fenced_codeblocks=1
 
 "bibtex
@@ -392,3 +392,5 @@ augroup ironmapping
     autocmd Filetype ipython vmap <buffer> <localleader>t <Plug>(iron-send-motion)
     autocmd Filetype ipython nmap <buffer> <localleader>p <Plug>(iron-repeat-cmd)
 augroup END
+
+let fdc=0
