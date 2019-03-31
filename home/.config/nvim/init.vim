@@ -138,7 +138,7 @@ nnoremap <F4> :bp<CR>
 let g:pandoc#filetypes#handled = ["pandoc", "markdown"]
 let g:pandoc#filetypes#pandoc_markdown = 0
 let g:pandoc#biblio#sources = "cg"
-let g:pandoc#biblio#bibs =  ['/home/mackenza/ref_bibs/mackenzie.bib']
+let g:pandoc#biblio#bibs =  ['/home/mackenza/ref_bibs/mackenzie.bib', 'ensemble.bib']
 let g:pandoc_use_bibtool = 1
 set grepprg=grep\ -nH\ $*
 
