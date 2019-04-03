@@ -40,14 +40,17 @@ blame
 blanch
 blast
 blather
+bleach
 bleat
 blind
 blink
 bloat
 block
+bloom
 blot
 blow
 blunder
+bluster
 boast
 bob
 boil
@@ -127,6 +130,7 @@ deal
 dib
 die
 dig
+dim
 dirty
 ditch
 dive
@@ -170,6 +174,7 @@ fear
 feed
 feel
 feign
+fence
 fetch
 fight
 file
@@ -572,6 +577,7 @@ side
 sieve
 sigh
 silt
+simmer
 sin
 sink
 sip
@@ -669,6 +675,7 @@ stink
 stint
 stir
 stitch
+stow
 strain
 strand
 strap
