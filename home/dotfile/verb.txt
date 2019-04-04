@@ -75,6 +75,8 @@ brick
 brush
 bud
 budge
+buff
+bug
 build
 bulk
 bumble
@@ -88,6 +90,7 @@ burst
 bush
 bust
 cache
+cage
 cake
 calm
 cash
@@ -102,6 +105,7 @@ chuck
 churn
 coast
 con
+cool
 couch
 crack
 crank
@@ -118,6 +122,7 @@ crumple
 crunch
 crush
 crust
+cuff
 curb
 curtsy
 dab
@@ -147,6 +152,7 @@ drill
 drip
 drive
 drizzle
+drool
 droop
 drop
 drum
@@ -198,6 +204,7 @@ fly
 foam
 fob
 foil
+fool
 foot
 fork
 founder
@@ -224,6 +231,7 @@ glance
 gleam
 glide
 glow
+glug
 gnash
 gnaw
 goad
@@ -305,6 +313,7 @@ joke
 jolt
 jot
 joust
+jug
 juice
 jump
 keel
@@ -420,6 +429,7 @@ ogle
 oil
 open
 other
+page
 pain
 palm
 pan
@@ -449,6 +459,7 @@ plunder
 plunge
 pocket
 poke
+pool
 port
 post
 pouch
@@ -466,6 +477,7 @@ prove
 prune
 pucker
 puff
+pulse
 pummel
 pump
 pun
@@ -488,6 +500,7 @@ quiver
 quiz
 quote
 rag
+rage
 raid
 rain
 rake
@@ -746,6 +759,7 @@ title
 toast
 toke
 toll
+tool
 top
 toss
 tote
@@ -782,6 +796,7 @@ twitch
 up
 urge
 use
+usher
 vanish
 vault
 vaunt
@@ -798,6 +813,7 @@ vote
 vouch
 vow
 wag
+wager
 wail
 wake
 wane
@@ -816,6 +832,7 @@ wheel
 wheeze
 whet
 whiff
+whilt
 whip
 whirl
 whizz

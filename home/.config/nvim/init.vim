@@ -393,4 +393,4 @@ augroup ironmapping
     autocmd Filetype ipython nmap <buffer> <localleader>p <Plug>(iron-repeat-cmd)
 augroup END
 
-let fdc=0
+set fdc=0
