@@ -56,6 +56,8 @@ call vundle#begin()
     ""Plugin 'sudar/vim-arduino-syntax'
     "Plugin 'thorstenb/odpdown'
     "Plugin 'sudar/vim-arduino-snippets'
+    Plugin 'NLKNguyen/papercolor-theme'
+    Plugin 'jceb/vim-orgmode'
     "
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -85,7 +87,6 @@ set encoding=utf-8
 set foldmethod=marker
 set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅
 
-set foldcolumn=6
 set autoread
 au CursorHold * checktime  
 
@@ -395,3 +396,5 @@ augroup ironmapping
 augroup END
 
 set fdc=0
+luafile $HOME/.config/nvim/plugins.lua
+nnoremap ,* *<C-O>:%s///gn<CR>
